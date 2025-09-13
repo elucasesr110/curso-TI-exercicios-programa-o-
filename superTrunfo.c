@@ -10,6 +10,9 @@ int main(){
     float area1;
     float pib1;
     int pontosTuristicos1;
+    float densidadePopulacional1;
+    float pibPercapita1;
+    
     
     char estado2;
     char codigo2[5];
@@ -18,7 +21,8 @@ int main(){
     float area2;
     float pib2;
     int pontosTuristicos2;
-    
+    float densidadePopulacional2;
+    float pibPercapita2;
     
     //PEDINDO PRA ENTRAR COM OS DADOS DA PRIMEIRA CARTA:
     printf("\n*INFORME OS DADOS PARA CADASTRAR A CARTA A*\n");
@@ -36,7 +40,11 @@ int main(){
     scanf("%f", &pib1);
     printf("informe o numero de pontos turisticos: \n");
     scanf("%d", &pontosTuristicos1);
-    
+        
+    //calculo da densidade populacional e pib per capita carta A
+    densidadePopulacional1 = populacao1 / area1;
+    pibPercapita1 = pib1 / populacao1;
+
     //PEDINDO PRA ENTRAR COM OS DADOS DA SEGUNDA CARTA:
    
     printf("\n*INFORME OS DADOS PARA CADASTRAR A CARTA B*\n");   
@@ -55,6 +63,11 @@ int main(){
     printf("informe o numero de pontos turisticos: \n");
     scanf("%d", &pontosTuristicos2);
     
+     //calculo da densidade populacional e pib per capita carta B
+    densidadePopulacional2 = populacao2 / area2;
+    pibPercapita2 = pib2 / populacao2;
+
+
     //imprimindo na telas os dados do primeir cadastro 
     printf("\n-----------------------------------------------------\n");
     printf("\nCARTA 1: \n");
@@ -65,8 +78,11 @@ int main(){
     printf("AREA: %f\n", area1);
     printf("PIB: %f\n", pib1);
     printf("NUMERO DE PONTOS TURISTICOS: %d\n", pontosTuristicos1);
+    printf("DENSIDADE POPULACIONAL: %f\n", densidadePopulacional1);
+    printf("PIB per Capita: %f\n", pibPercapita1);
     
     //imprimindo na tela os dados do segundo cadastro
+    printf("\n-----------------------------------------------------\n");
     printf("\nCARTA 2: \n");
     printf("ESTADO: %c\n", estado2);
     printf("CODIGO: %s\n", codigo2);
@@ -75,7 +91,8 @@ int main(){
     printf("AREA: %f\n", area2);
     printf("PIB: %f\n", pib2);
     printf("NUMERO DE PONTOS TURISTICOS: %d\n", pontosTuristicos2);
-    
+    printf("DENSIDADE POPULACIONAL: %f\n", densidadePopulacional2);
+    printf("PIB per Capita: %f\n", pibPercapita2);
     
     
     
